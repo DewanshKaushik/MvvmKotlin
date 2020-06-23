@@ -1,3 +1,5 @@
 package com.mymvvmkotlin.ui.splash
 
-interface SplashContract
+interface SplashContract {
+    fun openMainActivity()
+}

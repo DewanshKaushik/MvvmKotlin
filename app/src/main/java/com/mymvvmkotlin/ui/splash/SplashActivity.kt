@@ -34,4 +34,8 @@ class SplashActivity : BaseActivity<SplashViewModel?>(), SplashContract {
 
     }
 
+    override fun openMainActivity() {
+        TODO("Not yet implemented")
+    }
+
 }

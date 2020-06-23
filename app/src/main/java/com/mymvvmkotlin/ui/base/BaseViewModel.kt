@@ -2,13 +2,15 @@ package com.mymvvmkotlin.ui.splash.base
 
 import androidx.lifecycle.ViewModel
 import com.mymvvmkotlin.data.AppDataManager
+import com.mymvvmkotlin.data.DataManager
 import com.mymvvmkotlin.utils.rx.AppSchedulerProvider
+import com.mymvvmkotlin.utils.rx.SchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
 import java.lang.ref.WeakReference
 
 abstract class BaseViewModel<N>(
-    val dataManager: AppDataManager,
-    val schedulerProvider: AppSchedulerProvider
+    val dataManager: DataManager,
+    val schedulerProvider: SchedulerProvider
 ) : ViewModel() {
 
     val compositeDisposable: CompositeDisposable

@@ -10,4 +10,8 @@ class MainViewModel(
 ) : BaseViewModel<MainContract?>(appDataManager, appSchedulerProvider) {
 
 
+    fun getValue():Boolean{
+        return true;
+    }
+
 }
