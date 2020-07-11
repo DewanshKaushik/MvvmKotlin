@@ -1,5 +1,5 @@
 # MvvmKotlin
-1.Lifecycle,/n
+1.Lifecycle,
 2. Room,
 3. RxJava,
 4. Kotlin,
@@ -9,3 +9,4 @@
 8. Coroutine (not done)
 9. Architecture Components (not done)
 10. Unit Testing (not done)
+11. Clean Architecture
