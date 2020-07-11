@@ -1,5 +1,5 @@
 # MvvmKotlin
-1.Lifecycle,
+1.Lifecycle,/n
 2. Room,
 3. RxJava,
 4. Kotlin,
