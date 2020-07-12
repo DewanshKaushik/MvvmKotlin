@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.mymvvmkotlin.MainActivity">
+        <activity android:name=".ui.splash.main.MainActivity">
         </activity>
 
 

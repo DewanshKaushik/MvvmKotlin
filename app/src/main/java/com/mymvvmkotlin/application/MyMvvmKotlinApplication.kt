@@ -7,7 +7,10 @@ import com.webaddicted.techcleanarch.global.koin.dbModule
 import com.webaddicted.techcleanarch.global.koin.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
+//import org.koin.core.context.startKoin
+//import org.koin.android.ext.android.startKoin
 import org.koin.core.context.startKoin
+
 import org.koin.core.module.Module
 
 class MyMvvmKotlinApplication : Application() {

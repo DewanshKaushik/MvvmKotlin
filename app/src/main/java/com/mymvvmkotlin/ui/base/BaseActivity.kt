@@ -1,8 +1,10 @@
 package com.mymvvmkotlin.ui.splash.base
 
 import android.annotation.TargetApi
+import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -10,6 +12,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
 import com.mymvvmkotlin.utils.CommonUtils
 
 abstract class BaseActivity<V : BaseViewModel<*>?> : AppCompatActivity(),
@@ -74,7 +77,8 @@ abstract class BaseActivity<V : BaseViewModel<*>?> : AppCompatActivity(),
         mViewModel = if (mViewModel == null) getViewModel() else mViewModel
     }
 
-    fun showToast(string: String){
-        Toast.makeText(this,string,Toast.LENGTH_LONG).show()
+    fun showToast(string: String) {
+        Toast.makeText(this, string, Toast.LENGTH_LONG).show()
     }
+
 }

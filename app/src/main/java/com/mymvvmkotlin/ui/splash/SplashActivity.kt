@@ -1,9 +1,11 @@
 package com.mymvvmkotlin.ui.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.mymvvmkotlin.R
 import com.mymvvmkotlin.ui.splash.base.BaseActivity
+import com.mymvvmkotlin.ui.splash.main.MainActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SplashActivity : BaseActivity<SplashViewModel?>(), SplashContract {
@@ -14,7 +16,7 @@ class SplashActivity : BaseActivity<SplashViewModel?>(), SplashContract {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mViewModel.doLogin()
+        mViewModel.setNavigator(this)
     }
 
     override fun onFragmentDetached(tag: String?) {
@@ -28,14 +30,15 @@ class SplashActivity : BaseActivity<SplashViewModel?>(), SplashContract {
         return R.layout.activity_splash
     }
 
-    public fun showToastFromButton(view: View){
+    fun showToastFromButton(view: View) {
         showToast("Buttonclicked")
         mViewModel.doLogin()
 
     }
 
     override fun openMainActivity() {
-        TODO("Not yet implemented")
+        val i = Intent(this, MainActivity::class.java)
+        startActivity(i)
     }
 
 }

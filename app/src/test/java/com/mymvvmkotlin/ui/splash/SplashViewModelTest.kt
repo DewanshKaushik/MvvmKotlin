@@ -38,25 +38,15 @@ class SplashViewModelTest {
     fun setUp() {
         mTestScheduler = TestScheduler()
         val testSchedulerProvider = TestSchedulerProvider(mTestScheduler)
-        splashViewModel = SplashViewModel(dataManager, testSchedulerProvider)
+//        splashViewModel = SplashViewModel(dataManager, testSchedulerProvider)
         splashViewModel.setNavigator(mLoginCallback)
     }
 
     @Test
     fun doLogin() {
-
         splashViewModel.doLogin()
-
         mTestScheduler.triggerActions()
-
         verify(mLoginCallback).openMainActivity()
     }
 
-    @After
-    @Throws(java.lang.Exception::class)
-    fun tearDown() {
-      /*  mTestScheduler =null;
-        mLoginViewModel = null
-        mLoginCallback = null*/
-    }
 }
