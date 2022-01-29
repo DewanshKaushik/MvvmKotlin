@@ -60,6 +60,7 @@ class MainActivity : BaseActivity<MainViewModel?>(), MainContract, CoroutineScop
         GlobalScope.launch(Dispatchers.Main) {
             val userOne = async(Dispatchers.IO) { fetchFirstUser() }
             val userTwo = async(Dispatchers.IO) { fetchSecondUser() }
+            userOne.await();
         }
 
         // exceptional handling
